@@ -59,7 +59,6 @@ def annotated(f):
         # ensure defaults, among other things.
         for i, arg in enumerate(fi['args']):
             if i < len(args):
-                print(arg)
                 new_args.append(a(arg)(args[i]))
             else:
                 new_args.append(a(arg)(fi['defaults'][len(args) - i]))
