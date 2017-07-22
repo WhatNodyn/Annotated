@@ -7,7 +7,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
-    name='annotate',
+    name='annotated',
     version='0.0.1',
 
     description='Apply annotations as callables on their respective arguments',
@@ -30,5 +30,5 @@ setup(
     ],
 
     keywords='annotations decorator function development',
-    packages=['annotate']
+    packages=['annotated']
 )

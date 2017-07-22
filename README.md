@@ -1,6 +1,6 @@
-Python Annotate
-===============
-Annotate provides a decorator that flags a function's annotations as useful, callable expressions. Each annotation will be called with its corresponding argument as first parameter, and the result will replace that argument.
+Annotated
+=========
+Annotated provides a decorator that flags a function's annotations as useful, callable expressions. Each annotation will be called with its corresponding argument as first parameter, and the result will replace that argument.
 
 If no annotation was specified for this particular argument, it will behave as if `lambda x: x` had been used as annotation.
 
@@ -9,7 +9,7 @@ If no annotation was specified for this particular argument, it will behave as i
 The `@annotated` decorator is meant to decorate functions, or other objects with a `__code__` attribute (a class is **not** one). It indicates that the function decorated has "active" annotations, for example:
 
 ```python
-from annotate import annotated
+from annotated import annotated
 
 @annotated
 def hello(name: str):
@@ -28,7 +28,7 @@ Used this way, `@annotated` ensures that the `name` argument of the `hello` func
 `@annotated` also respects default values, and applies annotations to them. Thus, if we were to rewrite `hello` such as:
 
 ```python
-from annotate import annotated
+from annotated import annotated
 
 @annotated
 def hello(name: str='world'):
